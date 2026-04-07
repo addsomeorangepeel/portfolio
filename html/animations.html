@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Animations</title>
+<link rel="stylesheet" href="../css/css.css">
+<script src="../javascrip/js.js"></script>
+</head>
+<body>
+
+<header>
+    <a class="Title" href="main.html">
+        <h1>YU HOK KI CARLOS</h1>
+        <h2>Portfolio</h2>
+    </a>
+    
+    <nav>
+        <ul>
+            <li><a href="main.html">About</a></li>
+            <li><a href="digitalart.html">Artworks</a></li>
+            <li><a href="animations.html">Animations</a></li>
+            <li><a href="gamedev.html">Game & Modelling</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h1>Animations</h1>
+    <p>Gallery</p>
+</section>
+
+<section class="animationsgallery">
+    <div class="artwork">
+        <img src="../image/1C thumbnail.png" alt="walk cycle animation" data-video="../image/1C braindead ver.mp4" />
+    </div>
+    <div class="artwork">
+        <img src="../image/ass 1 thumbnail.png" alt="bouncing ball" data-video="../image/assignment 1.mp4" />
+    </div>
+    <div class="artwork">
+        <img src="../image/cancer thumbnail.png" alt="Animation assignment" data-video="../image/cancer.mp4" />
+    </div>
+
+</section>
+
+<div id="lightboxOverlay" class="lightbox-overlay" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-modal="true">
+        <button class="lightbox-close" aria-label="Close artwork overlay">×</button>
+        <img id="lightboxImage" src="" alt="Full artwork" style="display: none;" />
+        <video id="lightboxVideo" controls autoplay muted style="display: none; width: 100%; height: auto; max-height: calc(95vh - 70px);">
+            Your browser does not support the video tag.
+        </video>
+        <p id="lightboxCaption"></p>
+    </div>
+</div>
+
+</body>
+</html>
