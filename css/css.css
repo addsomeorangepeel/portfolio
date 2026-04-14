@@ -1,3 +1,13 @@
+html, body {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(73, 58, 39);
+}
+
+button, input, textarea, select {
+    font-family: inherit;
+    color: inherit;
+}
+
 header {
     background-color: #ffffff;
     color: rgb(73, 58, 39);
@@ -60,6 +70,24 @@ nav a:hover {
     text-decoration: underline;
 }
 
+header nav,
+section {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 hr{
     border: none;
     border-top: 3px solid rgb(73, 58, 39);
@@ -91,6 +119,15 @@ hr{
     flex: 1;
     font-family: 'Courier New', Courier, monospace;
     color: rgb(73, 58, 39);
+}
+
+.button-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: rgb(99, 80, 61);
+    vertical-align: middle;
 }
 
 .animations {
