@@ -2,19 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const lightboxOverlay = document.getElementById('lightboxOverlay');
   const lightboxImage = document.getElementById('lightboxImage');
   const lightboxVideo = document.getElementById('lightboxVideo');
-  const lightboxYouTube = document.getElementById('lightboxYouTube');
   const lightboxCaption = document.getElementById('lightboxCaption');
   const closeButton = document.querySelector('.lightbox-close');
 
   function openLightbox(src, alt, type) {
-    if (type === 'youtube') {
+    if (type === 'video') {
       lightboxImage.style.display = 'none';
-      lightboxVideo.style.display = 'none';
-      lightboxYouTube.style.display = 'block';
-      lightboxYouTube.src = `https://www.youtube.com/embed/${src}?autoplay=1`;
-    } else if (type === 'video') {
-      lightboxImage.style.display = 'none';
-      lightboxYouTube.style.display = 'none';
       lightboxVideo.style.display = 'block';
       const source = lightboxVideo.querySelector('source') || document.createElement('source');
       source.src = src;
@@ -24,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       lightboxVideo.load();
     } else {
-      lightboxYouTube.style.display = 'none';
       lightboxVideo.style.display = 'none';
       lightboxImage.style.display = 'block';
       lightboxImage.src = src;
@@ -41,20 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
     lightboxOverlay.setAttribute('aria-hidden', 'true');
     lightboxImage.src = '';
     lightboxVideo.pause();
-    lightboxYouTube.src = '';
     lightboxImage.style.display = 'none';
     lightboxVideo.style.display = 'none';
-    lightboxYouTube.style.display = 'none';
     document.body.style.overflow = '';
   }
 
   document.querySelectorAll('.artwork img').forEach((img) => {
     img.addEventListener('click', function () {
       const videoSrc = img.getAttribute('data-video');
-      const youTubeId = img.getAttribute('data-youtube');
-      if (youTubeId) {
-        openLightbox(youTubeId, img.alt, 'youtube');
-      } else if (videoSrc) {
+      if (videoSrc) {
         openLightbox(videoSrc, img.alt, 'video');
       } else {
         openLightbox(img.src, img.alt, 'image');
