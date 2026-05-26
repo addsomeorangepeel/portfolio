@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('.artwork video').forEach((video) => {
     video.addEventListener('click', function () {
-      openLightbox(video.querySelector('source').src, video.alt || 'Animation', 'video');
+      const videoSrc = video.querySelector('source') ? video.querySelector('source').src : video.src;
+      openLightbox(videoSrc, video.alt || 'Animation', 'video');
     });
     video.style.cursor = 'zoom-in';
   });

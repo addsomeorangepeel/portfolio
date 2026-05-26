@@ -3,6 +3,7 @@
 <head>
     <title>Game Development</title>
     <link rel="stylesheet" href="css/css.css">
+    <script src="javascrip/js.js"></script>
 </head>
 <body>
 
@@ -16,6 +17,7 @@
         <ul>
             <li><a href="index.html">Main page</a></li>
             <li><a href="digitalart.html">Artworks</a></li>
+            <li><a href="graphicdesign.html">Graphic Design</a></li>
             <li><a href="animations.html">Animations</a></li>
             <li><a href="gamedev.html">Game & modelling</a></li>
         </ul>
@@ -47,6 +49,17 @@
         <video src="image/VR_DEMO_TEST.mp4" controls muted loop></video>
     </div>
 </section>
+
+<div id="lightboxOverlay" class="lightbox-overlay" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-modal="true">
+        <button class="lightbox-close" aria-label="Close artwork overlay">×</button>
+        <img id="lightboxImage" src="" alt="Full artwork" style="display: none;" />
+        <video id="lightboxVideo" controls autoplay muted style="display: none; width: 100%; height: auto; max-height: calc(95vh - 70px);">
+            Your browser does not support the video tag.
+        </video>
+        <p id="lightboxCaption"></p>
+    </div>
+</div>
 
 </body>
 </html>
