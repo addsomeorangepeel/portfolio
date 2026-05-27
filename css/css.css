@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'Audiowide';
+    src: url('./fonts/Audiowide-Regular.ttf') format('truetype');
+}
+
 html, body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Audiowide';
     color: rgb(73, 58, 39);
 }
 
@@ -13,7 +18,7 @@ header {
     color: rgb(73, 58, 39);
     padding: 15px 20px;
     text-align: left;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Audiowide';
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -117,7 +122,7 @@ hr{
 
 .bannertext {
     flex: 1;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Audiowide';
     color: rgb(73, 58, 39);
 }
 
@@ -154,7 +159,7 @@ hr{
 
 .graphicdesigntext {
     flex: 1;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Audiowide';
     color: rgb(73, 58, 39);
 }
 
@@ -195,7 +200,7 @@ hr{
 .gametext{
     margin-left: 50px;
     flex: 1;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Audiowide';
     color: rgb(73, 58, 39);
 }
 
@@ -262,9 +267,20 @@ hr{
     color: rgb(73, 58, 39);
 }
 
+/* Center-align gallery titles */
+.artwork p {
+    text-align: center;
+}
+
+/* Center the section title for galleries */
+.gallerytitle {
+    text-align: center;
+    margin: 20px 0;
+}
+
 .animationtext {
     flex: 1;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Audiowide';
     color: rgb(73, 58, 39);
 }
 
